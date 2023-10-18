@@ -23,4 +23,13 @@ deposits = [200,200,200,200,200,200,200,200,200,200,200,200]            # final:
 #deposits = [500,1000,300,-250,500,185,-500,205,1200,-550,125,200]      # final: 3887.71
 #deposits = [1000,542,221.52,983,29.75,-10,982.23,10988,287,198,32,100]  # final: 16702.93
 
-    
+interestRate = 0.005
+
+for deposit in deposits:
+    openBalance += deposit
+    interest = openBalance * interestRate
+    openBalance += interest
+
+finalBalance = round(openBalance, 2)
+
+print(finalBalance)
